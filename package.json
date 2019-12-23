@@ -1,0 +1,23 @@
+{
+  "name": "ppx_os",
+  "description": "A basic ppx to inject the operating system as a string at compile time",
+  "author": "Zach Baylin",
+  "esy": {
+    "build": [
+      "dune build -p ppx_os -j4"
+    ]
+  },
+  "scripts": {
+    "test": "dune runtest",
+    "clean": "dune clean"
+  },
+  "dependencies": {
+    "@esy-ocaml/reason": "^3.4.0",
+    "@opam/ppxlib": ">=0.8.1"
+  },
+  "devDependencies": {
+    "ocaml": ">=4.6.0 <4.8.0",
+    "@opam/merlin": "^3.3.2",
+    "@opam/dune": "^1.8.0"
+  }
+}
