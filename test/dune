@@ -1,0 +1,18 @@
+(executable
+ (name pp)
+ (modules pp)
+ (libraries ppx_os ppxlib))
+
+(rule
+ (targets pp.result)
+ (deps test.ml)
+ (action (run ./pp.exe --impl %{deps} -o %{targets})))
+
+(alias
+ (name runtest)
+ (action (cat pp.result)))
+
+(test
+ (name test)
+ (modules test)
+ (preprocess (pps ppx_os)))

@@ -1,0 +1,7 @@
+(library
+ (name ppx_os)
+ (public_name ppx_os)
+ (wrapped false)
+ (kind ppx_rewriter)
+ (libraries ppxlib unix)
+ (preprocess (pps ppxlib.metaquot)))
