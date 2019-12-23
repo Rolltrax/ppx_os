@@ -1,6 +1,6 @@
 open Ppxlib
 
-let name = "getenv"
+let name = "operating_system"
 
 
 let os = match Sys.backend_type with

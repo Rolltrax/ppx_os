@@ -1,1 +1,1 @@
-let _ = [%getenv];
+let _ = [%operating_system];
